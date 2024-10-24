@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  blogdjango:
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/home/my-user/app
+    environment:
+      - DATABASE_NAME=postgres
+      - DATABASE_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - DATABASE_HOST=172.18.0.2
+      - DATABASE_PORT=5432
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      - db  # Certifique-se que o Django espera o db iniciar
+    networks:
+      - netdjango  # Rede compartilhada com o db
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: '0.5'
+#          memory: 512M
+
+  db:
+    image: postgres:15.8-alpine3.20
+    ports:
+      - 5433:5432
+    environment:
+      DATABASE_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - netdjango
+
+  pgadmin:
+    image: dpage/pgadmin4:8.11.0
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    depends_on:
+      - db
+    networks:
+      - netdjango
+
+volumes:
+  db-data:
+
+networks:
+  netdjango:
+      driver: bridge

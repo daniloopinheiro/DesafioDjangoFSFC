@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Django</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+            color: #2980b9;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        small {
+            display: block;
+            color: #7f8c8d;
+        }
+
+        /* Estilizando a lista de tags */
+        .tags {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .tags li {
+            display: inline;
+            background: #e74c3c;
+            color: white;
+            border-radius: 3px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        /* Estilizando o rodapé */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog Django</h1>
+    <h2>Posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.content }}</p>
+                <small>{{ post.created_at }}</small>
+                <p class="tags">Tags: {% for tag in post.tags.all %} <li>{{ tag.name }}</li> {% if not forloop.last %}, {% endif %} {% endfor %}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Tags</h2>
+    <ul>
+        {% for tag in tags %}
+            <li>{{ tag.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Blog Django</p>
+    </footer>
+</body>
+</html>

@@ -1,20 +1,17 @@
-# Use a imagem oficial do Python como base
-FROM python:3.11-slim
+# Use uma imagem base que tenha Python
+FROM python:3.12-slim
 
 # Defina o diretório de trabalho
 WORKDIR /app
 
-# Copie os arquivos de requisitos para instalar as dependências
-COPY requirements.txt .
+# Copie o requirements.txt para o contêiner
+COPY requirements.txt ./
 
 # Instale as dependências do projeto
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir django pillow psycopg2-binary kombu asgiref sqlparse python-decouple -r requirements.txt
 
-# Copie o restante do código do projeto para o contêiner
+# Copie o restante do código do seu projeto
 COPY . .
 
-# Exponha a porta que o Django usará
-EXPOSE 8000
-
-# Comando para iniciar o servidor Django
+# Comando padrão
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

@@ -1,5 +1,6 @@
 [youtube - imersao-fsfc-challenge-django](https://www.youtube.com/watch?v=7MMltg3Mzp0&t=111s)
-![imersao-fsfc-challenge](https://github.com/user-attachments/assets/ffa98229-4fd7-48fc-b01a-39c1fc62ba43)
+
+![imersao-desafio-django](https://github.com/user-attachments/assets/d61b419a-2eef-493b-bfa6-135818d4fa31)
 
 Neste desafio, você aprenderá a criar uma aplicação Django que simula um pequeno blog. O processo é dividido em etapas simples para facilitar a implementação.
 

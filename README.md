@@ -1,5 +1,3 @@
-[youtube - imersao-fsfc-challenge-django](https://www.youtube.com/watch?v=7MMltg3Mzp0&t=111s)
-
 ![imersao-desafio-django](https://github.com/user-attachments/assets/d61b419a-2eef-493b-bfa6-135818d4fa31)
 
 Neste desafio, você aprenderá a criar uma aplicação Django que simula um pequeno blog. O processo é dividido em etapas simples para facilitar a implementação.
@@ -23,3 +21,51 @@ Neste desafio, você aprenderá a criar uma aplicação Django que simula um peq
 9. **Criação do Template**: Crie um template básico em `core/templates/core/` para renderizar a página do blog com estilo.
 
 10. **Teste da Aplicação**: Inicie o servidor de desenvolvimento e acesse `http://127.0.0.1:8000/blog/` para visualizar sua aplicação em funcionamento.
+
+
+## 🎯 Objetivos
+
+* ✅ **Educar**: Ensinar passo a passo como criar uma aplicação com Django.
+* ✅ **Demonstrar**: Mostrar boas práticas de estruturação de apps no Django.
+* ✅ **Simplificar**: Transformar o aprendizado de Django em algo acessível e prático.
+
+---
+
+## 📚 Recursos
+
+* 🎥 **Vídeo Tutorial**: [Assista no YouTube](https://www.youtube.com/watch?v=7MMltg3Mzp0&t=111s)
+* 🧠 **Código de Referência**: Projeto disponível com exemplos de models, views, urls e templates.
+
+---
+
+## 🤝 Como Contribuir
+
+Contribuições são muito bem-vindas! Você pode:
+
+* Criar uma **Issue** com dúvidas, sugestões ou problemas.
+* Abrir um **Pull Request** com melhorias ou novos recursos.
+* Compartilhar com outros devs interessados em Django! 🚀
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+Você pode usar, modificar e compartilhar livremente.
+
+---
+
+## 📬 Entre em Contato
+
+Para **colaboração, dúvidas ou consultoria**, entre em contato:
+
+* ✉️ **Pessoal**: [daniloopro@gmail.com](mailto:daniloopro@gmail.com)
+* 🏢 **DevsFree**: [devsfree@devsfree.com.br](mailto:devsfree@devsfree.com.br)
+* 📊 **dopme.io**: [contato@dopme.io](mailto:contato@dopme.io)
+* 💼 **LinkedIn**: [Danilo O. Pinheiro](https://www.linkedin.com/in/daniloopinheiro)
+
+---
+
+<p align="center">
+  Feito com ❤️ por <a href="https://www.linkedin.com/in/daniloopinheiro" target="_blank"><strong>Danilo O. Pinheiro</strong></a> • <a href="mailto:contato@dopme.io">contato@dopme.io</a>
+</p>

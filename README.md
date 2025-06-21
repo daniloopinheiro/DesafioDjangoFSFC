@@ -1,5 +1,7 @@
 ![imersao-desafio-django](https://github.com/user-attachments/assets/d61b419a-2eef-493b-bfa6-135818d4fa31)
 
+[![Django CI](https://github.com/daniloopinheiro/DesafioDjangoFSFC/actions/workflows/django.yml/badge.svg)](https://github.com/daniloopinheiro/DesafioDjangoFSFC/actions/workflows/django.yml)
+
 Neste desafio, você aprenderá a criar uma aplicação Django que simula um pequeno blog. O processo é dividido em etapas simples para facilitar a implementação.
 
 1. **Instalação do Django**: Comece instalando o Django e o Python. Utilize o `pip` para instalar as dependências necessárias.
